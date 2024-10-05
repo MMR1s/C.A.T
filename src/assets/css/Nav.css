@@ -1,0 +1,195 @@
+/* General Styling for the Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    background: rgba(255, 255, 255, 0.1);
+    /* Glassmorphism effect */
+    backdrop-filter: blur(10px);
+    /* Blur the background behind the navbar */
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: 1em 2em 0 2em;
+    color: white;
+    transition: background 0.3s ease-in-out;
+}
+
+/* Navbar hover effect for background change */
+.navbar:hover {
+    background: rgba(255, 255, 255, 0.25);
+    /* Slightly more opaque on hover */
+    transition: background 0.5s ease-in-out;
+}
+
+/* Styling for Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 3em;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0c1a40;
+    text-shadow: 1px 1px 2px gray;
+    font-size: 1.1em;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.4s ease;
+}
+
+/* Change color of icons */
+.nav-links a svg {
+    color: #0c1a40;
+    /* Change to a darker color for icons */
+    transition: color 0.4s ease;
+    /* Smooth transition for color change */
+}
+
+/* Change icon color on hover */
+.nav-links a:hover svg {
+    color: #ffcc00;
+    /* Change icon color on hover */
+}
+
+/* Adding a hover underline animation */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 50%;
+    bottom: -5px;
+    background-color: #ffcc00;
+    transition: all 0.4s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+    /* Change color on hover */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Left and Right Navigation Links */
+.left {
+    margin-left: 2em;
+}
+
+.right {
+    margin-right: 2em;
+}
+
+/* Middle Image (Logo) */
+.nav-logo img {
+    width: 80px;
+    /* Adjust the size of the logo */
+    height: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    /* border: 2px solid #ffcc00; */
+    /* Add a stylish border */
+    padding: 0.3em;
+    transition: transform 0.4s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Animation for hovering over the logo */
+.nav-logo img:hover {
+    transform: rotate(360deg);
+    /* Rotate effect */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Dropdown Styles */
+.dropdown {
+    display: none;
+    /* Hidden by default */
+    flex-direction: column;
+    align-items: flex-start;
+    /* Align items to the left */
+    position: absolute;
+    /* Position it below the navbar */
+    top: 100%;
+    /* Position it below the navbar */
+    left: 0;
+    right: 0;
+    /* Stretch to the right */
+    background: rgba(255, 255, 255, 0.9);
+    /* Background color for dropdown */
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 0;
+    /* No extra margin */
+    z-index: 999;
+    /* Ensure it's on top */
+    padding: 0;
+    /* No extra padding */
+}
+
+/* Show dropdown when toggled */
+.dropdown.active {
+    display: flex;
+    /* Show dropdown */
+}
+
+/* Dropdown links styling */
+.dropdown a {
+    padding: 1em 2em;
+    /* Padding for dropdown links */
+    color: #0c1a40;
+    /* Same color as navbar links */
+    text-decoration: none;
+    font-weight: bold;
+    width: 100%;
+    /* Make links fill dropdown width */
+    text-align: left;
+    /* Align text to the left */
+    transition: background 0.3s ease-in-out;
+}
+
+/* Change background color on hover */
+.dropdown a:hover {
+    background: rgba(255, 204, 0, 0.1);
+    /* Light background on hover */
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    /* Hidden by default */
+    cursor: pointer;
+    /* Pointer on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        /* Hide nav links in mobile */
+    }
+
+    .hamburger {
+        display: block;
+        /* Show hamburger icon */
+    }
+
+    .navbar {
+        justify-content: space-between;
+        /* Ensure proper spacing */
+    }
+
+    /* Show nav links when dropdown is active */
+    .nav-links.left.active,
+    .nav-links.right.active {
+        display: flex;
+        /* Show nav links when dropdown is active */
+    }
+}

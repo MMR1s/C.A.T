@@ -1,0 +1,138 @@
+.Tips {
+    background-color: white;
+}
+
+.techniques {
+    text-align: center;
+    padding: 2em 0 6em 0;
+    max-width: 57.1em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.techniques h2 {
+    font-size: 2.2em;
+    font-weight: 800;
+    align-self: center;
+    margin-bottom: 0.5em;
+}
+
+.techniques p {
+    margin-bottom: 2em;
+    color: #777;
+    max-width: 30em;
+    align-self: center;
+}
+
+/* Technique Cards */
+.technique-cards {
+    display: flex;
+    justify-content: space-between;
+    /* Use space-between instead of space-around */
+    gap: 2em;
+    flex-wrap: wrap;
+    /* Allow cards to wrap on smaller screens */
+}
+
+.technique-card {
+    text-align: left;
+    max-width: 300px;
+    flex: 1 1 200px;
+    /* Allow cards to grow/shrink with a base width */
+}
+
+.technique-card h3 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.technique-card h4 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+}
+
+.technique-card p {
+    font-size: 1em;
+    color: #777;
+}
+
+.technique-card a {
+    font-size: 1em;
+    color: black;
+    font-weight: bold;
+}
+
+.technique-card a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 966px) {
+    .techniques {
+        padding: 2em 2em 6em 2em;
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    .techniques h2 {
+        font-size: 1.8em;
+        /* Adjust heading size */
+    }
+
+    .techniques p {
+        max-width: 100%;
+        /* Allow paragraph to take full width */
+    }
+
+    .technique-cards {
+        justify-content: center;
+        /* Center the cards on smaller screens */
+    }
+
+    .technique-card {
+        max-width: 100%;
+        /* Allow cards to take full width on small screens */
+        margin-bottom: 2em;
+        /* Add margin for spacing */
+    }
+
+    .technique-card h3 {
+        font-size: 2.5em;
+        /* Adjust heading size */
+    }
+
+    .technique-card h4 {
+        font-size: 1.2em;
+        /* Adjust heading size */
+    }
+}
+
+@media (max-width: 480px) {
+    .techniques h2 {
+        font-size: 1.5em;
+        /* Further adjust heading size */
+    }
+
+    .technique-card h3 {
+        font-size: 2em;
+        /* Further adjust heading size */
+    }
+
+    .technique-card h4 {
+        font-size: 1em;
+        /* Further adjust heading size */
+    }
+
+    .technique-card {
+        text-align: center;
+    }
+
+    .technique-card p {
+        font-size: 0.9em;
+        /* Adjust paragraph size */
+    }
+}

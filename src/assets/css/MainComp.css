@@ -1,0 +1,201 @@
+/* Hero Section */
+.hero-section {
+    max-width: 57.1em;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 2em 0 1em 0;
+    border-radius: 1em;
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+}
+
+.hero-text {
+    max-width: 28em;
+    background-color: #EEC643;
+    border-radius: 2em;
+    padding: 2em;
+    height: 28em;
+    /* Keep initial height */
+    box-sizing: border-box;
+    margin-right: 15px;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    line-height: 1em;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hero-text button {
+    padding: 15px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 2em;
+}
+
+.hero-image img {
+    max-width: 28em;
+    height: 28em;
+    /* Keep initial height */
+    border-radius: 2em;
+    object-fit: cover;
+}
+
+/* Services Section */
+.services-section {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #0c1a40;
+    border-radius: 1em;
+    flex-wrap: wrap;
+    /* Allow wrapping */
+}
+
+.service-card {
+    color: #fff;
+    text-align: center;
+    padding: 20px 40px;
+    width: 20%;
+    /* Keep initial width */
+}
+
+.service-card h3 {
+    margin-top: 10px;
+    font-weight: 100;
+    background: linear-gradient(270deg, #ffeeb8, #EEC643, #ffffff);
+    background-size: 200% 100%;
+    animation: gradient-text 2s ease backwards infinite;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.service-icon {
+    font-size: 40px;
+    display: inline-block;
+    transition: transform 0.1s;
+}
+
+.service-icon:hover {
+    animation: tilt 0.3s ease forwards;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    .archery-container {
+        padding: 0 1em;
+    }
+
+    .hero-section {
+
+        flex-direction: column;
+        /* Stack elements vertically */
+        align-items: center;
+    }
+
+    .hero-text {
+        margin-right: 0;
+        /* Remove right margin */
+        margin-bottom: 1em;
+        /* Space between text and image */
+        max-width: 100%;
+        /* Keep initial width */
+        height: auto;
+        padding: 5em;
+        /* Keep initial height */
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+
+    .hero-image img {
+        width: 100vw;
+        height: 40vh;
+        object-fit: cover;
+        display: block;
+    }
+
+
+    .service-card {
+        width: 20%;
+        /* Keep initial width */
+        margin-bottom: 1em;
+        /* Space between service cards */
+    }
+}
+
+@media (max-width: 768px) {
+    .archery-container {
+        max-width: 90%;
+    }
+
+
+    .hero-text h1 {
+        font-size: 2.5em;
+        /* Slightly reduce font size */
+    }
+
+    .hero-text p {
+        font-size: 14px;
+        /* Adjust text size */
+    }
+
+    .service-icon {
+        font-size: 30px;
+        /* Slightly reduce icon size */
+    }
+
+
+}
+
+@media (max-width: 666px) {
+    .hero-text {
+        padding: 5em 2em;
+    }
+
+
+    .services-section {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .service-card {
+        justify-content: center;
+        width: 45%;
+    }
+}
+
+@keyframes tilt {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    50% {
+        transform: rotate(5deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}

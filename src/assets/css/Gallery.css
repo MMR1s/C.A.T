@@ -1,0 +1,208 @@
+.gallery-section {
+    background-color: #0c1a40;
+    height: 50em;
+    height: auto;
+    margin-top: 2em;
+}
+
+.gallery-main {
+    padding: 2em 0;
+    max-width: 57.1em;
+    margin: 0 auto;
+}
+
+
+.gallery-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.gallery-text {
+    color: white;
+}
+
+.gallery-text p {
+    max-width: 95%;
+}
+
+.gallery-info button {
+    height: 2.3em;
+    width: 6em;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 2em;
+    font-weight: 540;
+    text-align: center;
+    align-self: center;
+}
+
+
+.gallery-images {
+    padding: 1em;
+    /* columns: 356px; */
+    gap: 5px;
+    display: flex;
+    /* flex-direction: column; */
+    gap: 20px;
+}
+
+.gallery-images div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gallery-images img {
+    border-radius: 1em;
+    /* width: 100%; */
+    /* height: 100%; */
+    border-radius: 2em;
+    object-fit: cover;
+    /* Makes images responsive */
+    /* height: auto; */
+    /* Maintains aspect ratio */
+}
+
+.img1 {
+    width: 100%;
+    height: 76%;
+    /* 353px / 466px = 0.7579 or ~76% */
+    object-fit: cover;
+}
+
+.img2 {
+    width: 100%;
+    height: 66.5%;
+    /* 310px / 466px = 0.665 */
+    object-fit: cover;
+}
+
+.img3 {
+    width: 100%;
+    height: 105%;
+    /* 490px / 466px = 1.051 */
+    object-fit: cover;
+}
+
+.img4 {
+    width: 100%;
+    height: 37.3%;
+    /* 174px / 466px = 0.373 */
+    object-fit: cover;
+}
+
+.img5 {
+    width: 100%;
+    height: 65.5%;
+    /* 305px / 466px = 0.655 */
+    object-fit: cover;
+}
+
+.img6 {
+    width: 100%;
+    height: 77.3%;
+    /* 360px / 466px = 0.773 */
+    object-fit: cover;
+}
+
+@media (max-width:1023px) {
+    .gallery-main {
+        padding: 0 2em;
+    }
+
+    .gallery-info {
+        flex-direction: column;
+
+    }
+
+    .gallery-info button {
+        align-self: flex-start;
+    }
+
+    /* .gallery-images div {width: 100%;
+} */
+
+    /* .gallery-images {display: flex;
+flex-wrap: wrap;
+} */
+
+}
+
+@media (max-width: 426px) {
+    .gallery-images {
+        display: flex;
+        flex-wrap: wrap;
+        /* Allows divs to wrap onto new lines */
+    }
+
+    .gallery-images>div {
+        flex: 1 1 calc(50% - 10px);
+        /* Each div will take about 50% width, minus gap */
+        margin-bottom: 10px;
+        /* Adds space between the divs */
+    }
+
+    /* Target the last div and make it take the full width */
+    .gallery-images div:last-child {
+        flex: 1 1 100%;
+        /* Takes full width */
+        display: flex;
+        flex-direction: row;
+        /* Stacks the images inside the last div in a column */
+    }
+
+    /* Ensure the images inside the last div are responsive */
+    .gallery-images div:last-child img {
+        width: 47%;
+        /* Adds space between images */
+    }
+}
+
+
+/*
+.img7 {
+    width: 466px;
+    height: 360px;
+    object-fit: cover;
+    display: none;
+}
+
+.img8 {
+    height: 300px;
+    display: none;
+    object-fit: cover;
+}
+ @media (max-width: 1110px) {
+    .img2 {
+        height: 360px;
+
+    }
+
+    .img7 {
+        display: block;
+    }
+}
+
+@media (max-width: 749px) {
+    .img7 {
+        display: none;
+    }
+}
+
+@media (min-width: 1471px) {
+    .gallery-images img {
+        display: flex;
+        margin: 5px;
+    }
+
+    .img7 {
+        width: 466px;
+        height: 360px;
+    }
+
+    .img8 {
+        display: none;
+    }
+} */
