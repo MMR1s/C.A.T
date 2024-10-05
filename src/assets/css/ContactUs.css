@@ -77,6 +77,10 @@
     gap: 1.5rem;
 }
 
+textarea {
+    max-width: 92%;
+}
+
 input,
 textarea {
     padding: 1rem;
